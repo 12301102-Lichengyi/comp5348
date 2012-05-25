@@ -40,6 +40,7 @@ namespace VideoStore.WebClient.ViewModels
             Order lOrder = new Order();
             lOrder.OrderDate = DateTime.Now;
             lOrder.Customer = pUserCache.Model;
+            lOrder.UserId = pUserCache.Model.Id;
             lOrder.Status = 0;
             foreach(OrderItem lItem in mOrderItems)
             {

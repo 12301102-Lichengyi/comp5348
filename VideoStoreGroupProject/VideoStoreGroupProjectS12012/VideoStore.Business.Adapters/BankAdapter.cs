@@ -115,10 +115,11 @@ namespace VideoStore.Business.Adapters
             // transaction
             using (TransactionScope lScope = new TransactionScope())
             {
-                Console.WriteLine("GUID - VideoStore:  " + pOutcome.OperationReference);
+                //Console.WriteLine("GUID - VideoStore:  " + pOutcome.OperationReference);
                 // use the enternal id to get the order, HOW ?
                 Order lOrder = ServiceLocator.Current.GetInstance<IOrderProvider>().GetOrderByExternalId(pOutcome.OperationReference);
-
+                
+                String name = lOrder.Customer.Address;
 
                 lOrder.StartTracking();
                 if(pOutcome.Outcome == Bank.Business.Entities.OperationOutcome.OperationOutcomeResult.Successful)

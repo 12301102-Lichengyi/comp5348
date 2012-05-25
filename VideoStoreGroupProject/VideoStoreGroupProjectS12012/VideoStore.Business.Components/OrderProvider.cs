@@ -97,6 +97,7 @@ namespace VideoStore.Business.Components
             using (VideoStoreEntityModelContainer lContainer = new VideoStoreEntityModelContainer())
             {
                 Order lOrder = lContainer.Orders.Where((pOrder) => pOrder.ExternalId == pId).FirstOrDefault();
+                lOrder.Customer = lContainer.Users.Where((pUser) => pUser.Id == lOrder.UserId).FirstOrDefault();
                 return lOrder;
             }
         }

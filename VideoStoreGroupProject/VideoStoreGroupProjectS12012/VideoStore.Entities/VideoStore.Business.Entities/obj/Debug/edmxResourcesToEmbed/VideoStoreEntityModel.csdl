@@ -84,6 +84,7 @@
     <NavigationProperty Name="OrderItems" Relationship="VideoStoreEntityModel.OrderOrderItem" FromRole="Order" ToRole="OrderItem" />
     <NavigationProperty Name="Customer" Relationship="VideoStoreEntityModel.CustomerOrder" FromRole="Order" ToRole="Customer" />
     <Property Type="String" Name="ExternalId" Nullable="false" />
+    <Property Type="Int32" Name="UserId" Nullable="false" />
   </EntityType>
   <EntityType Name="OrderItem">
     <Key>

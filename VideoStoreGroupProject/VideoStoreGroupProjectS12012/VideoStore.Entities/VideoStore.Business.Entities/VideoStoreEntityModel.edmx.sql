@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 05/26/2012 01:59:20
+-- Date Created: 05/26/2012 03:37:41
 -- Generated from EDMX file: D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\VideoStore.Entities\VideoStore.Business.Entities\VideoStoreEntityModel.edmx
 -- --------------------------------------------------
 
@@ -116,6 +116,7 @@ CREATE TABLE [dbo].[Orders] (
     [Store] nvarchar(max)  NULL,
     [Status] int  NOT NULL,
     [ExternalId] nvarchar(max)  NOT NULL,
+    [UserId] int  NOT NULL,
     [DeliveryOrder_Order_Id] int  NULL,
     [Customer_Id] int  NOT NULL
 );
