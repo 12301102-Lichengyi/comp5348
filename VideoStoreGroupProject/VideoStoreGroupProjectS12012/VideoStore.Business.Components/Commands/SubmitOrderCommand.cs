@@ -21,6 +21,7 @@ namespace VideoStore.Business.Components.Commands
         public override void Execute()
         {
             EntityInsertCommand<Order> lOrderCreateCmd = new EntityInsertCommand<Order>(Order);
+
             Order.UpdateStockLevels();
             lOrderCreateCmd.Execute();
         }

@@ -11,5 +11,7 @@ namespace Bank.Business.Entities
 
         public String Message { get; set; }
         public OperationOutcomeResult Outcome { get; set; }
+
+        public String OperationReference { get; set; }
     }
 }

@@ -14,6 +14,7 @@ using VideoStore.Business.Adapters.ReviewSubscriptionService;
 using VideoStore.Business.Adapters;
 using System.ServiceModel;
 
+
 namespace VideoStore.Business.Adapters
 {
     public class MediaReviewsCompanyAdapter : IAdapter, IReviewSubscriber

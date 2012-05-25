@@ -16,6 +16,7 @@ namespace MessageBus
         {
             using (TransactionScope lScope = new TransactionScope())
             {
+                // use all the callback function in the registry to handle the message
                 foreach (CallBackDelegate lHandlerAddress in SubscriptionRegistry.Instance.GetTopicSubscribers(pMessage.Topic))
                 {
                     lHandlerAddress(pMessage);

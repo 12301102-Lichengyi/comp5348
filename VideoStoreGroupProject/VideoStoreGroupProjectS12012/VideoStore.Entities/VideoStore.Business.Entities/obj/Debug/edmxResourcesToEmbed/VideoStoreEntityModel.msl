@@ -31,6 +31,7 @@
           <ScalarProperty Name="Warehouse" ColumnName="Warehouse" />
           <ScalarProperty Name="Store" ColumnName="Store" />
           <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="ExternalId" ColumnName="ExternalId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

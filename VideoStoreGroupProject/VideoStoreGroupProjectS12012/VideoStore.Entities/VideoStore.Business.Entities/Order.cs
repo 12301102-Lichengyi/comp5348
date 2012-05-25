@@ -102,6 +102,21 @@ namespace VideoStore.Business.Entities
             }
         }
         private int _status;
+    
+        [DataMember]
+        public string ExternalId
+        {
+            get { return _externalId; }
+            set
+            {
+                if (_externalId != value)
+                {
+                    _externalId = value;
+                    OnPropertyChanged("ExternalId");
+                }
+            }
+        }
+        private string _externalId;
 
         #endregion
         #region Navigation Properties

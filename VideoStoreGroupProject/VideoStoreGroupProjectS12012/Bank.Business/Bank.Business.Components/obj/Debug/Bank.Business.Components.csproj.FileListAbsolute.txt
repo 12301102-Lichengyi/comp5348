@@ -41,3 +41,13 @@ E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\Bank.Business\Bank.
 E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Components\obj\Debug\ResolveAssemblyReference.cache
 E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Components\obj\Debug\Bank.Business.Components.dll
 E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Components\obj\Debug\Bank.Business.Components.pdb
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Business.Components.dll.config
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Business.Components.dll
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Business.Components.pdb
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Business.Components.Interfaces.dll
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Business.Entities.dll
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Business.Components.Interfaces.pdb
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Components\bin\Debug\Bank.Business.Entities.pdb
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Components\obj\Debug\ResolveAssemblyReference.cache
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Components\obj\Debug\Bank.Business.Components.dll
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Components\obj\Debug\Bank.Business.Components.pdb

@@ -11,13 +11,14 @@ namespace Bank.Business.Components
 {
     public class TransferProvider : ITransferProvider
     {
-
         /**
          * This function transfer "pAmount" from "pFromAcct" to "pToAcct"
          */
-        public void Transfer(decimal pAmount, int pFromAcctNumber, int pToAcctNumber, String pDescription)
+        public void Transfer(decimal pAmount, int pFromAcctNumber, int pToAcctNumber, String pDescription, String pReturnAddress)
         {
-            bool lOutcome = true;
+            OperationOutcome.OperationOutcomeResult lResult = OperationOutcome.OperationOutcomeResult.Successful;
+            
+
             String lMessage = "TransferSuccessful";
             try
             {
@@ -28,7 +29,6 @@ namespace Bank.Business.Components
                     Account lToAcct = GetAccountFromNumber(pToAcctNumber);
                     
                     lFromAcct.Withdraw(pAmount);
-                    
                     lToAcct.Deposit(pAmount);
 
                     lContainer.Attach(lFromAcct);
@@ -45,18 +45,18 @@ namespace Bank.Business.Components
                 Console.WriteLine("Error occured while transferring money:  " + lException.Message);
                 
                 lMessage = lException.Message;
-                lOutcome = false;
+                lResult = OperationOutcome.OperationOutcomeResult.Failure;
                 throw;
             }
             finally
             {
-
                 /**
-                 * notify if the transfer is successful - don't know if the user can see it
+                 * notify if the transfer is successful 
                  */
-                TransferNotificationService.TransferNotificationServiceClient lClient = new TransferNotificationService.TransferNotificationServiceClient();
-                
-                lClient.NotifyTransferOutcome(lOutcome, lMessage, pDescription);
+                IOperationOutcomeService lService = OperationOutcomeServiceFactory.GetOperationOutcomeService(pReturnAddress);
+                Console.WriteLine("GUID - Bank:  " + pDescription);
+                lService.NotifyOperationOutcome(new OperationOutcome() { Message = lMessage, Outcome = lResult, OperationReference = pDescription });
+
                 //here you should know if the outcome of the transfer was successful or not
             }
 

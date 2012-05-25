@@ -7,6 +7,9 @@ namespace VideoStore.Business.Entities
 {
     public partial class Order
     {
+        //public String ExternalId;
+
+
         public double Total
         {
             get
@@ -32,6 +35,35 @@ namespace VideoStore.Business.Entities
                 {
                     throw new Exception("Cannot place an order - no more stock for media item");
                 }
+            }
+        }
+
+
+        /**
+         * RALL BACK THE STOCK LEVEL
+         * author: Yu Zhao
+         */
+        public void RollbackStockLevels()
+        {
+            this.MarkAsModified();
+            foreach (OrderItem lItem in this.OrderItems)
+            {
+                lItem.MarkAsModified();
+                lItem.Media.MarkAsModified();
+                lItem.Media.Stocks.MarkAsModified();
+
+                lItem.Media.Stocks.Quantity += lItem.Quantity;
+            }
+        }
+        public String ExternalOrderId
+        {
+            get 
+            {
+                if (ExternalId == null)
+                {
+                    ExternalId = Guid.NewGuid().ToString();
+                }
+                return ExternalId;
             }
         }
     }

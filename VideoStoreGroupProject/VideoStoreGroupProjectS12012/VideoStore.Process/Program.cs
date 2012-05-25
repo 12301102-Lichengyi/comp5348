@@ -16,6 +16,8 @@ using VideoStore.Business.Entities;
 using System.Transactions;
 using System.ServiceModel.Description;
 using VideoStore.Business.Components.Interfaces;
+// I need to add this
+using Bank.Business.Components.Interfaces;
 using VideoStore.Business.Adapters;
 using MessageBus.Interfaces;
 using VideoStore.Common;
@@ -27,15 +29,26 @@ namespace VideoStore.Process
         static void Main(string[] args)
         {
             ResolveDependencies();
+
+            // start all the Adapters at the time videostore starts running
             StartAdapters();
+
+            // insert items into the database
             InsertDummyEntities();
+
+            // 
             HostServices();
         }
 
         private static void StartAdapters()
         {
+            // bank subscribe videostore
             (new BankAdapter()).Start();
+
+            // 
             (new VideoStoreAdapter()).Start();
+            
+            // 
             (new MediaReviewsCompanyAdapter()).Start();
         }
 

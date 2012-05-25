@@ -14,3 +14,11 @@ E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\VideoStore.Business
 E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\VideoStore.Business.MessageBus\obj\x86\Debug\ResolveAssemblyReference.cache
 E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\VideoStore.Business.MessageBus\obj\x86\Debug\MessageBus.dll
 E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\VideoStore.Business.MessageBus\obj\x86\Debug\MessageBus.pdb
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\VideoStore.Business.MessageBus\bin\Debug\MessageBus.dll.config
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\VideoStore.Business.MessageBus\bin\Debug\MessageBus.dll
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\VideoStore.Business.MessageBus\bin\Debug\MessageBus.pdb
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\VideoStore.Business.MessageBus\bin\Debug\Common.dll
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\VideoStore.Business.MessageBus\bin\Debug\Common.pdb
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\VideoStore.Business.MessageBus\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\VideoStore.Business.MessageBus\obj\x86\Debug\MessageBus.dll
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\VideoStore.Business.MessageBus\obj\x86\Debug\MessageBus.pdb

@@ -22,3 +22,15 @@ E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\MediaRevCo.Business
 E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\MediaRevCo.Business.Components\obj\Debug\ResolveAssemblyReference.cache
 E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\MediaRevCo.Business.Components\obj\Debug\MediaRevCo.Business.Components.dll
 E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\MediaRevCo.Business.Components\obj\Debug\MediaRevCo.Business.Components.pdb
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\MediaRevCo.Business.Components\bin\Debug\MediaRevCo.Business.Components.dll
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\MediaRevCo.Business.Components\bin\Debug\MediaRevCo.Business.Components.pdb
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\MediaRevCo.Business.Components\bin\Debug\Common.dll
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\MediaRevCo.Business.Components\bin\Debug\MediaRevCo.Business.Components.Interfaces.dll
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\MediaRevCo.Business.Components\bin\Debug\MediaRevCo.Business.Entities.dll
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\MediaRevCo.Business.Components\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\MediaRevCo.Business.Components\bin\Debug\Common.pdb
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\MediaRevCo.Business.Components\bin\Debug\MediaRevCo.Business.Components.Interfaces.pdb
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\MediaRevCo.Business.Components\bin\Debug\MediaRevCo.Business.Entities.pdb
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\MediaRevCo.Business.Components\obj\Debug\ResolveAssemblyReference.cache
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\MediaRevCo.Business.Components\obj\Debug\MediaRevCo.Business.Components.dll
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\MediaRevCo.Business.Components\obj\Debug\MediaRevCo.Business.Components.pdb

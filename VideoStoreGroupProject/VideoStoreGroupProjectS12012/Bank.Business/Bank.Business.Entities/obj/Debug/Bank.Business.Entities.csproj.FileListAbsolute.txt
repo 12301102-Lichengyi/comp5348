@@ -22,3 +22,9 @@ E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\Bank.Business\Bank.
 E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Entities\obj\Debug\ResolveAssemblyReference.cache
 E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Entities\obj\Debug\Bank.Business.Entities.dll
 E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Entities\obj\Debug\Bank.Business.Entities.pdb
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Entities\bin\Debug\Bank.Business.Entities.dll.config
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Entities\bin\Debug\Bank.Business.Entities.dll
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Entities\bin\Debug\Bank.Business.Entities.pdb
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Entities\obj\Debug\ResolveAssemblyReference.cache
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Entities\obj\Debug\Bank.Business.Entities.dll
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Bank.Business\Bank.Business.Entities\obj\Debug\Bank.Business.Entities.pdb

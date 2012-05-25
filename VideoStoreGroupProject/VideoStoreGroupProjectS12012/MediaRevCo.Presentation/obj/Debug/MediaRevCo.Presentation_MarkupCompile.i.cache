@@ -4,7 +4,7 @@
 library
 C#
 .cs
-E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\MediaRevCo.Presentation\obj\Debug\
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\MediaRevCo.Presentation\obj\Debug\
 MediaRevCo.Presentation
 none
 false
@@ -12,8 +12,8 @@ DEBUG;TRACE
 
 2-1060101052
 
-7-175385405
-161471512821
+7-107803745
+161985816352
 Views\ReviewAdder.xaml;Views\ReviewsList.xaml;
 
 False

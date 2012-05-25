@@ -50,6 +50,14 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Bank.Business\Bank.Business.Entities\Bank.Business.Entities.csproj">
+      <Project>{4BB64DAE-6F81-4E3D-A2BD-41075F28F15F}</Project>
+      <Name>Bank.Business.Entities</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MediaRevCo.Business.Components.Interfaces\MediaRevCo.Business.Components.Interfaces.csproj">
+      <Project>{D1F0E1CC-F21C-41DC-92B1-3D4DEA0A0764}</Project>
+      <Name>MediaRevCo.Business.Components.Interfaces</Name>
+    </ProjectReference>
     <ProjectReference Include="..\VideoStore.Entities\VideoStore.Business.Entities\VideoStore.Business.Entities.csproj">
       <Project>{35992EC3-2C32-46AF-AEE4-491C54F681A5}</Project>
       <Name>VideoStore.Business.Entities</Name>

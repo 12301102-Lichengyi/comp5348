@@ -12,6 +12,6 @@ namespace Bank.Services.Interfaces
         //[OperationContract]
         [OperationContract(IsOneWay = true)]
         [TransactionFlow(TransactionFlowOption.Allowed)]
-        void Transfer(decimal pAmount, int pFromAcctNumber, int pToAcctNumber, String pDescription);
+        void Transfer(decimal pAmount, int pFromAcctNumber, int pToAcctNumber, String pDescription, String pReturnAddress);
     }
 }

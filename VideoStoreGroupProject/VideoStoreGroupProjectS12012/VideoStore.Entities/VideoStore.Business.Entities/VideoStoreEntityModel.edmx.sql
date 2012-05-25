@@ -2,13 +2,13 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 04/09/2012 23:05:46
--- Generated from EDMX file: C:\Users\Matt\Desktop\GroupProject2012\VideoStoreWithRolesS12012\VideoStoreWithRolesS12012\VideoStore.Entities\VideoStore.Business.Entities\VideoStoreEntityModel.edmx
+-- Date Created: 05/26/2012 01:59:20
+-- Generated from EDMX file: D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\VideoStore.Entities\VideoStore.Business.Entities\VideoStoreEntityModel.edmx
 -- --------------------------------------------------
 
 SET QUOTED_IDENTIFIER OFF;
 GO
-USE [VideoBankA];
+USE [VideoStoreVideo];
 GO
 IF SCHEMA_ID(N'dbo') IS NULL EXECUTE(N'CREATE SCHEMA [dbo]');
 GO
@@ -115,6 +115,7 @@ CREATE TABLE [dbo].[Orders] (
     [Warehouse] nvarchar(max)  NULL,
     [Store] nvarchar(max)  NULL,
     [Status] int  NOT NULL,
+    [ExternalId] nvarchar(max)  NOT NULL,
     [DeliveryOrder_Order_Id] int  NULL,
     [Customer_Id] int  NOT NULL
 );

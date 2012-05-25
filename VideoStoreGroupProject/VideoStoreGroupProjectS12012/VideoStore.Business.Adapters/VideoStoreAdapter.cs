@@ -14,6 +14,8 @@ namespace VideoStore.Business.Adapters
         public void Start()
         {
             ISubscriptionService lSubscriber = ServiceLocator.Current.GetInstance<ISubscriptionService>();
+
+            // the first argument is the same for all subscribers
             lSubscriber.Subscribe(typeof(Command).AssemblyQualifiedName, HandleMessage);
         }
 

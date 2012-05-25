@@ -33,3 +33,8 @@ E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\Common\bin\Debug\Co
 E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\Common\obj\Debug\ResolveAssemblyReference.cache
 E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\Common\obj\Debug\Common.dll
 E:\VideoStoreGroupProjectS12012\VideoStoreGroupProjectS12012\Common\obj\Debug\Common.pdb
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Common\bin\Debug\Common.dll
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Common\bin\Debug\Common.pdb
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Common\obj\Debug\ResolveAssemblyReference.cache
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Common\obj\Debug\Common.dll
+D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\Common\obj\Debug\Common.pdb

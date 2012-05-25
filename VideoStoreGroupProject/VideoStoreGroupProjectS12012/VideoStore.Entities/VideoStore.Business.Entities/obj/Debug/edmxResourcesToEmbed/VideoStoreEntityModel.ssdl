@@ -82,6 +82,7 @@
     <Property Name="Warehouse" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Store" Type="nvarchar(max)" Nullable="true" />
     <Property Name="Status" Type="int" Nullable="false" />
+    <Property Name="ExternalId" Type="nvarchar(max)" Nullable="false" />
     <Property Name="DeliveryOrder_Order_Id" Type="int" Nullable="true" />
     <Property Name="Customer_Id" Type="int" Nullable="false" />
   </EntityType>
