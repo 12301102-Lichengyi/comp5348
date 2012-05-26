@@ -37,18 +37,11 @@ namespace Bank.Process
         }
 
         private static readonly String sPublishQueuePath = ".\\private$\\BankTransferQueueTransacted";
-        // ADD A NOTIFICATION QUEUE
-        //private static readonly String sNotificationQueuePath = ".\\private$\\OperationOutcomeNotificationQueueTransacted";
-
         private static void EnsureMessageQueuesExists()
         {
             // Create the transacted MSMQ queue if necessary.
             if (!MessageQueue.Exists(sPublishQueuePath))
                 MessageQueue.Create(sPublishQueuePath, true);
-
-            // MAKE SURE THE NOTIFICATION QUEUE EXISTS
-            //if (!MessageQueue.Exists(sNotificationQueuePath))
-            //    MessageQueue.Create(sNotificationQueuePath, true);
         }
 
 

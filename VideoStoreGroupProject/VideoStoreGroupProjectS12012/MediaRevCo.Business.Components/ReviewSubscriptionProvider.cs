@@ -16,6 +16,8 @@ namespace MediaRevCo.Business.Components
         private static Dictionary<String, List<String>> sSubscriptions = null;
         private const String cRegistryFile = "Registry.txt";
 
+
+        // Initiate the sSubscriptions, read from file "Registry.txt"
         static ReviewSubscriptionProvider()
         {
             sSubscriptions = new Dictionary<string, List<string>>();
@@ -29,6 +31,11 @@ namespace MediaRevCo.Business.Components
             }
         }
 
+
+        /**
+         * MAIN
+         * implement the interfact function
+         */
         public void SubscribeForReviews(string pAddress, string pUPC)
         {
             if(!sSubscriptions.ContainsKey(pUPC))
@@ -42,18 +49,25 @@ namespace MediaRevCo.Business.Components
             }
         }
 
+
+        /**
+         * use the UPC as the key to find the address
+         */
         public void PublishReview(Entities.Review pReview)
         {
             if(sSubscriptions.ContainsKey(pReview.UPC))
             {
                 foreach(String lSubscriberAddress in sSubscriptions[pReview.UPC])
                 {
+                    // use the address to get the Subscriber
                     IReviewSubscriber lSubscriber = ServiceFactory.GetService<IReviewSubscriber>(lSubscriberAddress);
                     lSubscriber.ReceiveReview(pReview);
                 }
             }           
         }
 
+
+        // Write to the file
         private void UpdatePersistedRegistry()
         {
             using (Stream stream = new FileStream(cRegistryFile, FileMode.Create, FileAccess.Write, FileShare.Write))

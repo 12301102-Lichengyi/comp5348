@@ -55,6 +55,8 @@ namespace Bank.Business.Components
                  */
                 IOperationOutcomeService lService = OperationOutcomeServiceFactory.GetOperationOutcomeService(pReturnAddress);
                 //Console.WriteLine("GUID - Bank:  " + pDescription);
+
+                // USE THE RESPONSE QUEUE
                 lService.NotifyOperationOutcome(new OperationOutcome() { Message = lMessage, Outcome = lResult, OperationReference = pDescription });
 
                 //here you should know if the outcome of the transfer was successful or not

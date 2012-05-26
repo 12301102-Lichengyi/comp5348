@@ -20,7 +20,10 @@ namespace VideoStore.Business.Adapters
     public class MediaReviewsCompanyAdapter : IAdapter, IReviewSubscriber
     {
 
-        private const String cSubscriberServiceAddress = "net.tcp://localhost:9010/SubscriberService";
+        //private const String cSubscriberServiceAddress = "net.tcp://localhost:9010/SubscriberService";
+
+        // this queue is for transfer review to the VideoStore
+        private const String cSubscriberServiceAddress = "net.msmq://localhost/private/ReviewQueue";
 
         public void Start()
         {
@@ -31,9 +34,31 @@ namespace VideoStore.Business.Adapters
 
         private void HostReviewSubscriberService()
         {
+            // create review queue
+            EnsureReviewQueueExists();
+
+
             ServiceHost lHost = new ServiceHost(typeof(MediaReviewsCompanyAdapter));
-            lHost.AddServiceEndpoint(typeof(IReviewSubscriber), new NetTcpBinding(),
-               cSubscriberServiceAddress);
+
+            /**
+            lHost.AddServiceEndpoint(typeof(IReviewSubscriber), 
+                new NetTcpBinding(),
+                cSubscriberServiceAddress);
+            */
+
+
+            /**
+             * NEWLY ADDED
+             * host the service of review queue
+             */
+            
+            NetMsmqBinding lBinding = new NetMsmqBinding();
+            lBinding.Security.Mode = NetMsmqSecurityMode.None;
+            lHost.AddServiceEndpoint(typeof(IReviewSubscriber),
+                lBinding,
+                getWCFQueueName());
+            
+
             lHost.Open();
         }
 
@@ -47,6 +72,10 @@ namespace VideoStore.Business.Adapters
             }
         }
 
+
+        /**
+         * Implement the function in IReviewSubscriber
+         */
         public void ReceiveReview(MediaRevCo.Business.Entities.Review pReview)
         {
             ReviewTransformVisitor lVis = new ReviewTransformVisitor();
@@ -54,6 +83,32 @@ namespace VideoStore.Business.Adapters
             ServiceLocator.Current.GetInstance<IPublisherService>().Publish(
                 CommandFactory.Instance.GetEntityInsertCommand<VideoStore.Business.Entities.Review>(lVis.Result)
             );
+        }
+
+
+        /**
+         * NEWLY ADDED 
+         */
+        private String getQueueName()
+        {
+            return "ReviewQueue";
+        }
+        private String getWCFQueueName()
+        {
+            return "net.msmq://localhost/private/" + getQueueName();
+        }
+        private String getMessagingQueueName()
+        {
+            return ".\\private$\\" + getQueueName();
+        }
+        private void EnsureReviewQueueExists()
+        {
+            String lQueuePath = getMessagingQueueName();
+            // create the transacted MSMQ if necessary
+            if (!System.Messaging.MessageQueue.Exists(lQueuePath))
+            {
+                System.Messaging.MessageQueue.Create(lQueuePath, true);
+            }
         }
     }
 }

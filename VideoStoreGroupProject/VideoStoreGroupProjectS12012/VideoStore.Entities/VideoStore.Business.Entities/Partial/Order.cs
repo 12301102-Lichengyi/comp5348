@@ -40,7 +40,7 @@ namespace VideoStore.Business.Entities
 
 
         /**
-         * RALL BACK THE STOCK LEVEL
+         * ROLL BACK THE STOCK LEVEL
          * author: Yu Zhao
          */
         public void RollbackStockLevels()

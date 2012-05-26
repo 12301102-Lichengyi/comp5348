@@ -20,6 +20,7 @@ using Microsoft.Practices.ServiceLocation;
 using System.Configuration;
 using System.ServiceModel;
 using MediaRevCo.Services;
+using System.Messaging;
 
 namespace MediaRevCo.Process
 {
@@ -31,6 +32,13 @@ namespace MediaRevCo.Process
         public MainWindow()
         {
             InitializeComponent();
+
+            /**
+             * NEWLY ADDED
+             */
+            EnsureMessageQueuesExists();
+
+
             ResolveDependencies();
            
             ReviewListViewModel lModel = PresentationFactory.Instance.GetReviewListViewModel();
@@ -45,6 +53,22 @@ namespace MediaRevCo.Process
             ServiceHost lHost = new ServiceHost(typeof(ReviewSubscriptionService));
             lHost.Open();
         }
+
+
+        /**
+         * NEWLY ADDED
+         */
+        private static readonly String sReviewSubscriptionQueuePath = ".\\private$\\ReviewSubscriptionQueueTransacted";
+        private static void EnsureMessageQueuesExists()
+        {
+            // Create the transacted MSMQ queue if necessary.
+            if (!MessageQueue.Exists(sReviewSubscriptionQueuePath))
+                MessageQueue.Create(sReviewSubscriptionQueuePath, true);
+        }
+
+
+
+
 
         private static void ResolveDependencies()
         {
