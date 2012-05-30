@@ -41,6 +41,8 @@
         <MappingFragment StoreEntitySet="OrderItems">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="order_Id" ColumnName="order_Id" />
+          <ScalarProperty Name="MediaId" ColumnName="MediaId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -51,6 +53,7 @@
           <ScalarProperty Name="Warehouse" ColumnName="Warehouse" />
           <ScalarProperty Name="Holding" ColumnName="Holding" />
           <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="MediaId" ColumnName="MediaId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

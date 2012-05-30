@@ -40,10 +40,18 @@ namespace VideoStore.WebClient.ViewModels
             Order lOrder = new Order();
             lOrder.OrderDate = DateTime.Now;
             lOrder.Customer = pUserCache.Model;
+            // NEWLY ADDED 
             lOrder.UserId = pUserCache.Model.Id;
+
             lOrder.Status = 0;
+
             foreach(OrderItem lItem in mOrderItems)
             {
+                // NEWLY ADDED
+                lItem.order_Id = lOrder.ExternalOrderId;
+                lItem.MediaId = lItem.Media.Id;
+                lItem.Media.Stocks.setMediaId(lItem.Media.Id);
+
                 lOrder.OrderItems.Add(lItem);
             }
 

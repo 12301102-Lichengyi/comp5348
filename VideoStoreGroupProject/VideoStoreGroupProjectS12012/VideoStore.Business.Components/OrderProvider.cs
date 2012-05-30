@@ -59,16 +59,18 @@ namespace VideoStore.Business.Components
         {
             String lMessage = String.Format("Your order has been submitted successfully");
 
-            // When the user submits an order, add this order to the order pool
-            //addOrder(pOrder);
+            
 
-
-
+            // added transaction when submit an order
             try
             {
-                ServiceLocator.Current.GetInstance<IPublisherService>().Publish(
-                    CommandFactory.Instance.GetSubmitOrderCommand(pOrder)
-                );
+                using (TransactionScope lScope = new TransactionScope()) 
+                {
+                    ServiceLocator.Current.GetInstance<IPublisherService>().Publish(
+                        CommandFactory.Instance.GetSubmitOrderCommand(pOrder)
+                    );
+                    lScope.Complete();
+                }
             }
             catch (Exception lException)
             {
@@ -83,21 +85,48 @@ namespace VideoStore.Business.Components
         }
 
 
-        // ?
+        /**
+         * NEWLY ADDED
+         * ACCESS THE DATABASE TO SAVE THE ROLLBACK
+         */ 
         public void UpdateOrder(Entities.Order pOrder)
         {
-            // remove the order from the pool when the order fails
-            //removeOrder(pOrder);
+            using (TransactionScope lScope = new TransactionScope())
+            using (VideoStoreEntityModelContainer lContainer = new VideoStoreEntityModelContainer())
+            {
+                lContainer.ApplyChanges(typeof(Order).Name + "s", pOrder);
+                lContainer.SaveChanges();
+                lScope.Complete();
+            }
         }
 
+        /**
+         * NEWLY ADDED 
+         * IMPLEMENT GET ORDER BY EXTERNAL ID
+         */
         public Order GetOrderByExternalId(String pId)
         {
-            //return RetireveOrder(pId);
-
             using (VideoStoreEntityModelContainer lContainer = new VideoStoreEntityModelContainer())
             {
                 Order lOrder = lContainer.Orders.Where((pOrder) => pOrder.ExternalId == pId).FirstOrDefault();
-                lOrder.Customer = lContainer.Users.Where((pUser) => pUser.Id == lOrder.UserId).FirstOrDefault();
+                User lUser = lContainer.Users.Where((pUser) => pUser.Id == lOrder.UserId).FirstOrDefault();
+                lOrder.Customer = lUser;
+
+                List<OrderItem> lOrderItems = lContainer.OrderItems.Where((pOrderItem) => pOrderItem.order_Id == lOrder.ExternalOrderId).ToList<OrderItem>();
+                TrackableCollection<OrderItem> lTrackableOrderItems = new TrackableCollection<OrderItem>();
+
+                foreach(OrderItem lItem in lOrderItems)
+                {
+                    Media lMedia = lContainer.Medias.Where((pMedia) => pMedia.Id == lItem.MediaId).FirstOrDefault();
+                    Stock lStock = lContainer.Stocks.Where((pStock) => pStock.MediaId == lItem.MediaId).FirstOrDefault();
+                    lMedia.Stocks = lStock;
+                    lItem.Media = lMedia;
+
+                    lTrackableOrderItems.Add(lItem);
+                }
+
+                lOrder.OrderItems = lTrackableOrderItems;
+
                 return lOrder;
             }
         }

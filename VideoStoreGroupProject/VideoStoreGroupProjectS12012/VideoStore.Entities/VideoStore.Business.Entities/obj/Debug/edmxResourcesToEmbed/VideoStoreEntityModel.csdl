@@ -93,6 +93,8 @@
     <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Type="Int32" Name="Quantity" Nullable="false" />
     <NavigationProperty Name="Media" Relationship="VideoStoreEntityModel.OrderItemMedia" FromRole="OrderItem" ToRole="Media" />
+    <Property Type="String" Name="order_Id" Nullable="false" />
+    <Property Type="Int32" Name="MediaId" Nullable="false" />
   </EntityType>
   <EntityType Name="Stock">
     <Key>
@@ -103,6 +105,7 @@
     <Property Type="Int32" Name="Holding" Nullable="true" />
     <Property Type="Int32" Name="Quantity" Nullable="false" />
     <NavigationProperty Name="Media" Relationship="VideoStoreEntityModel.MediaStock" FromRole="Stock" ToRole="Media" />
+    <Property Type="Int32" Name="MediaId" Nullable="true" />
   </EntityType>
   <Association Name="DeliveryOrder">
     <End Type="VideoStoreEntityModel.Delivery" Role="Delivery" Multiplicity="0..1" />

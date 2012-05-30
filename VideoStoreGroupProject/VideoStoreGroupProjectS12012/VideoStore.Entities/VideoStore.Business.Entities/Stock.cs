@@ -86,6 +86,21 @@ namespace VideoStore.Business.Entities
             }
         }
         private int _quantity;
+    
+        [DataMember]
+        public Nullable<int> MediaId
+        {
+            get { return _mediaId; }
+            set
+            {
+                if (_mediaId != value)
+                {
+                    _mediaId = value;
+                    OnPropertyChanged("MediaId");
+                }
+            }
+        }
+        private Nullable<int> _mediaId;
 
         #endregion
         #region Navigation Properties

@@ -2,7 +2,7 @@
 -- --------------------------------------------------
 -- Entity Designer DDL Script for SQL Server 2005, 2008, and Azure
 -- --------------------------------------------------
--- Date Created: 05/26/2012 03:37:41
+-- Date Created: 05/30/2012 14:21:28
 -- Generated from EDMX file: D:\zrepos\comp5348\VideoStoreGroupProject\VideoStoreGroupProjectS12012\VideoStore.Entities\VideoStore.Business.Entities\VideoStoreEntityModel.edmx
 -- --------------------------------------------------
 
@@ -126,6 +126,8 @@ GO
 CREATE TABLE [dbo].[OrderItems] (
     [Id] int IDENTITY(1,1) NOT NULL,
     [Quantity] int  NOT NULL,
+    [order_Id] nvarchar(max)  NOT NULL,
+    [MediaId] int  NOT NULL,
     [OrderOrderItem_OrderItem_Id] int  NOT NULL,
     [Media_Id] int  NOT NULL
 );
@@ -136,7 +138,8 @@ CREATE TABLE [dbo].[Stocks] (
     [Id] uniqueidentifier  NOT NULL,
     [Warehouse] nvarchar(max)  NOT NULL,
     [Holding] int  NULL,
-    [Quantity] int  NOT NULL
+    [Quantity] int  NOT NULL,
+    [MediaId] int  NULL
 );
 GO
 

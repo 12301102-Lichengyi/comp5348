@@ -53,6 +53,7 @@ namespace VideoStore.Business.Entities
                 lItem.Media.Stocks.MarkAsModified();
 
                 lItem.Media.Stocks.Quantity += lItem.Quantity;
+
             }
         }
         public String ExternalOrderId

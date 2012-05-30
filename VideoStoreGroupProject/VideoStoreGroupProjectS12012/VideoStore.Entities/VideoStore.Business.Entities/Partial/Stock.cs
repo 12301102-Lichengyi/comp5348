@@ -11,5 +11,10 @@ namespace VideoStore.Business.Entities
         {
             this.Id = Guid.NewGuid();
         }
+
+        public void setMediaId(int Id)
+        {
+            this.MediaId = Id;
+        }
     }
 }

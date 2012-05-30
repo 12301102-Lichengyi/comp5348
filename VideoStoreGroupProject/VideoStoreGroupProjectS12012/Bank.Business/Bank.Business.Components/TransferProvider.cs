@@ -46,7 +46,7 @@ namespace Bank.Business.Components
                 
                 lMessage = lException.Message;
                 lResult = OperationOutcome.OperationOutcomeResult.Failure;
-                throw;
+                //throw;
             }
             finally
             {

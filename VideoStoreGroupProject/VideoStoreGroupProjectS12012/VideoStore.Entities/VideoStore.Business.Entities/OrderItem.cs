@@ -56,6 +56,36 @@ namespace VideoStore.Business.Entities
             }
         }
         private int _quantity;
+    
+        [DataMember]
+        public string order_Id
+        {
+            get { return _order_Id; }
+            set
+            {
+                if (_order_Id != value)
+                {
+                    _order_Id = value;
+                    OnPropertyChanged("order_Id");
+                }
+            }
+        }
+        private string _order_Id;
+    
+        [DataMember]
+        public int MediaId
+        {
+            get { return _mediaId; }
+            set
+            {
+                if (_mediaId != value)
+                {
+                    _mediaId = value;
+                    OnPropertyChanged("MediaId");
+                }
+            }
+        }
+        private int _mediaId;
 
         #endregion
         #region Navigation Properties

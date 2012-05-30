@@ -133,7 +133,7 @@ namespace VideoStore.Business.Adapters
 
                     // rollback the stock level of each of the ordered item
                     lOrder.RollbackStockLevels();
-                    // ?
+                    // ACCESS THE DATABASE TO SAVE THE ROLLBACK
                     OrderProvider.UpdateOrder(lOrder);
 
                     EmailProvider.SendMessage(lOrder.Customer.Email, String.Format("Hi {0}, your order failed because {1}", lOrder.Customer.Name, pOutcome.Message));

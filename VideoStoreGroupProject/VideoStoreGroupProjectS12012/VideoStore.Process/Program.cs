@@ -83,6 +83,11 @@ namespace VideoStore.Process
                     Stock lGreatExpectationsStock = new Stock()
                     {
                         Media = lGreatExpectations,
+
+                        // NEWLY ADDED
+                        MediaId = lGreatExpectations.Id,
+
+
                         Holding = 5,
                         Warehouse = "Neutral Bay",
                         Quantity = 1
@@ -115,6 +120,10 @@ namespace VideoStore.Process
                     Stock lSoloistStock = new Stock()
                     {
                         Media = lSoloist,
+
+                        // NEWLY ADDED
+                        MediaId = lSoloist.Id,
+
                         Holding = 7,
                         Warehouse = "Neutral Bay",
                         Quantity = 1
@@ -149,6 +158,11 @@ namespace VideoStore.Process
                         Stock lStock = new Stock()
                         {
                             Media = lItem,
+
+                            // NEWLY ADDED
+                            //MediaId = lItem.Id,
+
+
                             Holding = 7,
                             Warehouse = String.Format("Warehouse {0}", i),
                             Quantity = 1
